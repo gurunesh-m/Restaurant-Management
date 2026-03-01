@@ -32,12 +32,12 @@ const Menu = () => {
                         <h1 className="section-title display-4 brand-font">Our Menu</h1>
                     </div>
 
-                    <Nav variant="pills" className="justify-content-center mb-5 border-bottom border-secondary pb-3 gap-3">
+                    <Nav variant="pills" className="justify-content-center mb-5 border-bottom border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.1)] pb-3 gap-3">
                         {categories.map((cat, idx) => (
                             <Nav.Item key={idx}>
                                 <Nav.Link
-                                    className={`btn-outline-gold rounded-pill border px-4 py-2 ${activeTab === cat ? 'active bg-gold text-dark' : 'text-light border-secondary'}`}
-                                    style={activeTab === cat ? { backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)', color: 'var(--bg-darker) !important', fontWeight: '600' } : { cursor: 'pointer' }}
+                                    className={`btn-outline-gold rounded-pill border px-4 py-2 ${activeTab === cat ? 'active bg-[var(--primary-color)] text-[var(--bg-dark)]' : 'text-[var(--text-main)] border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.1)]'}`}
+                                    style={activeTab === cat ? { backgroundColor: 'var(--primary-color)', borderColor: 'var(--primary-color)', color: 'var(--bg-dark) !important', fontWeight: '600' } : { cursor: 'pointer' }}
                                     onClick={() => setActiveTab(cat)}
                                 >
                                     {cat}
@@ -59,14 +59,14 @@ const Menu = () => {
                                         />
                                     </div>
                                     <div className="flex-grow-1 text-start">
-                                        <div className="d-flex justify-content-between align-items-center mb-2 border-bottom border-secondary pb-2">
-                                            <h4 className="brand-font mb-0 text-white d-flex align-items-center gap-2">
+                                        <div className="d-flex justify-content-between align-items-center mb-2 border-bottom border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.1)] pb-2">
+                                            <h4 className="brand-font mb-0 text-[var(--text-main)] d-flex align-items-center gap-2">
                                                 {item.name}
                                                 {!item.is_available && <Badge bg="danger" className="fs-6 fw-normal ms-2">Sold Out</Badge>}
                                             </h4>
                                             <span className="price-tag fs-5">{item.price}</span>
                                         </div>
-                                        <p className="text-muted mb-0 lh-sm">{item.description}</p>
+                                        <p className="text-[var(--text-muted)] mb-0 lh-sm">{item.description}</p>
                                     </div>
                                 </div>
                             </Col>

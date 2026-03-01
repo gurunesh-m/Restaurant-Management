@@ -6,15 +6,11 @@
 
 :root {
   --primary-color: #6c757d;
-  /* Minimalistic light/medium grey */
   --primary-hover: #495057;
-  --bg-dark: #fbfbfb;
-  /* Very light grey */
-  --bg-darker: #f0f0f0;
-  /* Slightly darker grey */
+  --bg-dark: #f0f0f0;
+  --bg-darker: #e5e5e5;
   --bg-light: #ffffff;
-  --text-main: #212529;
-  /* Dark text for readability */
+  --text-main: #4a4a4a;
   --text-muted: #868e96;
   --font-heading: 'Playfair Display', serif;
   --font-sans: 'Outfit', sans-serif;
@@ -28,8 +24,8 @@
   --bg-dark: #121212;
   --bg-darker: #0a0a0a;
   --bg-light: #1e1e1e;
-  --text-main: #fbfbfb;
-  --text-muted: #a0a5b1;
+  --text-main: #d4d4d4;
+  --text-muted: #a3a3a3;
 }
 
 body {
@@ -216,6 +212,11 @@ a {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--text-main);
   padding: 0.75rem 1rem;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
 }
 
 .dark .form-control,
