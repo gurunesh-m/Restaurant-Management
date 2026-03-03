@@ -4,7 +4,7 @@
  */
 const dbConfig = {
     /** MongoDB connection URI */
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/restraunt',
+    uri: process.env.MONGO_URI || 'mongodb://localhost:27017/restraunt',
 
     /** Connection pool options */
     options: {
